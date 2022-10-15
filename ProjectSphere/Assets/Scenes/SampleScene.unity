@@ -199,8 +199,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216233019}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -150.19}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 370594481}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +375,8 @@ GameObject:
   - component: {fileID: 440136568}
   - component: {fileID: 440136567}
   - component: {fileID: 440136566}
+  - component: {fileID: 440136570}
+  - component: {fileID: 440136571}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -409,8 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a4d382291763641aa7fc8546007447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityF: 50
   rb: {fileID: 440136568}
-  gravity: 10
   speedZ: 400
   sidewaysForce: 15
   inputMove: {x: 0, y: 0, z: 0}
@@ -438,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440136565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -135.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -447,6 +449,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &440136570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440136565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5aa57d8c4ef40f4798e32414d3f0e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpTwo: 1
+  canJump: 0
+  doubleCanJump: 0
+  jumpHeight: 100
+  grounded: 0
+  maxJumpCount: 2
+  jumpsRemaining: 0
+  count: 0
+  countJump: 0
+  jump: 0
+  intera: 0
+  jumpsRemainingTwo: 0
+  jumpOne: 0
+--- !u!114 &440136571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440136565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d864ea11ed19d46b93d21cdccd01f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
 --- !u!1 &676043985
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +822,7 @@ GameObject:
   - component: {fileID: 1085751235}
   m_Layer: 0
   m_Name: PiedraG
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,7 +1016,7 @@ GameObject:
   - component: {fileID: 1125239991}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125239990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.71, z: -68}
+  m_LocalPosition: {x: 0, y: 3.74, z: -68}
   m_LocalScale: {x: 10, y: 4, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1073,7 +1113,7 @@ GameObject:
   - component: {fileID: 1299064453}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1210,7 @@ GameObject:
   - component: {fileID: 1575279811}
   m_Layer: 0
   m_Name: PiedraP
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,8 +1382,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974576504}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: -134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []

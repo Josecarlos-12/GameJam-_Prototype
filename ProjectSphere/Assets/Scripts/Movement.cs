@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
         rb.velocity =  transform.forward + inputMove.x * sidewaysForce * transform.right;
 
         inputMove.x = Input.GetAxis("Horizontal");
-        Vector3 velocity = Vector3.zero;
+        //Vector3 velocity = Vector3.zero;
         if ( inputMove.x > 1 || inputMove.z > 1 )
         {
             
@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
             }
                 
         }
-        velocity.y += gravityF * Time.deltaTime;
+        //velocity.y += gravityF * Time.deltaTime;
         
     }
 }

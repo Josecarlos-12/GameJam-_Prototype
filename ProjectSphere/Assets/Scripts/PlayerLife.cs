@@ -35,5 +35,9 @@ public class PlayerLife : MonoBehaviour
             floor.transform.position = new Vector3(0, 0, floor.transform.position.z + 4);
             scenary.speed = scenary.speed + 900;
         }
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangeCharacter : MonoBehaviour
 {
+    public int moneys;
     public GameObject sphere, cube;
     public bool change;
 
@@ -16,6 +17,8 @@ public class ChangeCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetInt("Money", moneys);
+
         if ( Input.GetKeyDown(KeyCode.T) )
         {
             change = !change;
@@ -30,6 +33,20 @@ public class ChangeCharacter : MonoBehaviour
                 cube.SetActive(false);
                 sphere.SetActive(true);
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Money"))
+        {
+            if (!change)
+            {
+                moneys++;
+                Debug.Log("Toco");
+                Destroy(other.gameObject);
+            }
+            
         }
     }
 }

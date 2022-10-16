@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 
     public float jumpForce;
     public bool canJump;
+    public int jumpCount;
 
     private void Update()
     {

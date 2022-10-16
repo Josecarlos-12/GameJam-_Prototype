@@ -537,6 +537,7 @@ MonoBehaviour:
   inputMove: {x: 0, y: 0, z: 0}
   jumpForce: 13
   canJump: 0
+  jumpCount: 0
 --- !u!54 &440136568
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -585,6 +586,8 @@ MonoBehaviour:
   floor: {fileID: 0}
   scenary: {fileID: 0}
   count: 0
+  jump: {fileID: 0}
+  transform: {fileID: 0}
 --- !u!1 &704027043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6042637579892872889, guid: 2d21a1b0b19778a4c879852845e704d1, type: 3}

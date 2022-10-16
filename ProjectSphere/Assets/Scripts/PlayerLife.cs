@@ -9,6 +9,8 @@ public class PlayerLife : MonoBehaviour
     public Scenary scenary;
     public int count;
 
+    public GameObject jump,transform;
+
     private void Update( )
     {
         if ( count>1)
@@ -38,6 +40,14 @@ public class PlayerLife : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
+        }
+        if (other.gameObject.name == "Saltar")
+        {
+            jump.SetActive(true);
+        }
+        if (other.gameObject.name == "Tranformar")
+        {
+            transform.SetActive(true);
         }
     }
 }

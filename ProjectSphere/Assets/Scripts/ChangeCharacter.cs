@@ -8,6 +8,7 @@ public class ChangeCharacter : MonoBehaviour
     public GameObject sphere, cube;
     public bool change;
 
+    public bool death;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class ChangeCharacter : MonoBehaviour
 
         if ( Input.GetKeyDown(KeyCode.T) )
         {
+            if(!death)
             change = !change;
             
             if ( change ) 
@@ -29,7 +31,7 @@ public class ChangeCharacter : MonoBehaviour
                 sphere.SetActive(false);
             }
             if (change == false) 
-            {
+            { 
                 cube.SetActive(false);
                 sphere.SetActive(true);
             }

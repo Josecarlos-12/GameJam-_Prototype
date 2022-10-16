@@ -79,6 +79,11 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void ExitGame( )
+    {
+        Application.Quit();
+    }
+
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;

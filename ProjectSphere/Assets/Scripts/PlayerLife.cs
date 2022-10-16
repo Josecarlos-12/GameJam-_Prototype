@@ -9,8 +9,8 @@ public class PlayerLife : MonoBehaviour
     public Scenary scenary;
     public int count;
 
-    public GameObject jump,transform;
-
+    public GameObject jump,transformOn;
+    public float reductionvelocity;
     private void Update( )
     {
         if ( count>1)
@@ -35,7 +35,7 @@ public class PlayerLife : MonoBehaviour
             count++;
             Debug.Log("smaal");
             floor.transform.position = new Vector3(0, 0, floor.transform.position.z + 4);
-            scenary.speed = scenary.speed + 900;
+            scenary.speed = scenary.speed + reductionvelocity;
         }
         if (other.gameObject.CompareTag("Obstacle"))
         {
@@ -47,7 +47,7 @@ public class PlayerLife : MonoBehaviour
         }
         if (other.gameObject.name == "Tranformar")
         {
-            transform.SetActive(true);
+            transformOn.SetActive(true);
         }
     }
 }

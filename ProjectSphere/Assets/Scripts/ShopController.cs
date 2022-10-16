@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
-    public int currentSphereIndex =0;
+    public int currentSphereIndex;
     public GameObject [] sphereSkins;
     void Start()
     {
+        currentSphereIndex=PlayerPrefs.GetInt("SelectedSkin",0);
         foreach(GameObject sphere in sphereSkins)
         {
             sphere.SetActive(false);

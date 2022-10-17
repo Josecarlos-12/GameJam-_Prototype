@@ -10,14 +10,14 @@ public class ChooseCharacter : MonoBehaviour
     public TextMeshProUGUI text;
 
     void Start()
-    {
-        
+    {        
+        //PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money"));
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = "Pheres: " + PlayerPrefs.GetInt("Money").ToString("0");
+        text.text = "Trust: " + PlayerPrefs.GetInt("Money").ToString("0");
         PlayerPrefs.SetInt("Money", change.moneys+change1.moneys+change2.moneys);
 
 

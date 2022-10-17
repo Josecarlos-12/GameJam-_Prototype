@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public Color color;
+
     public float life;
     public GameObject floor;
     public Scenary scenary;
@@ -19,6 +21,7 @@ public class PlayerLife : MonoBehaviour
     {
         if ( count>1)
         {
+            death.death = true;
             deathPlayer = true;
             Time.timeScale = 0;
             //Destroy(gameObject);
@@ -40,7 +43,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Small"))
         {
-            death.death = true;
+            
             count++;
             Debug.Log("smaal");
             floor.transform.position = new Vector3(0, 0, floor.transform.position.z + 4);

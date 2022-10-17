@@ -35,7 +35,7 @@ public class ChangeShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tex.text = "Pheres: " + PlayerPrefs.GetInt("Money").ToString("0");
+        tex.text = "Trust: " + PlayerPrefs.GetInt("Money").ToString("0");
         Debug.Log(PlayerPrefs.GetInt("Money"));
         if(PlayerPrefs.GetInt("ProtaT") == 3)
         {

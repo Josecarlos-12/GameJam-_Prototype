@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -4.3f, 4.3f), transform.position.y, transform.position.z);
 
         inputMove.x = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector3(inputMove.x * sidewaysForce, rb.velocity.y);
+        rb.velocity = new Vector3(inputMove.x * sidewaysForce, rb.velocity.y,0);
 
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {

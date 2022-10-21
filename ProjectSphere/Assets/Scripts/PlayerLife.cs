@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -64,6 +65,10 @@ public class PlayerLife : MonoBehaviour
         if (other.gameObject.name == "Tranformar")
         {
             transformOn.SetActive(true);
+        }
+        if (other.gameObject.name == "Final")
+        {
+            SceneManager.LoadScene("FinalGame");
         }
     }
 }
